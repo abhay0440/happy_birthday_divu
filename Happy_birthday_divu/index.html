@@ -37,6 +37,9 @@
       font-size: 2rem;
       margin-bottom: 2rem;
       animation: glow 2s ease-in-out infinite alternate;
+      text-align: center;
+      max-width: 90vw;
+      word-wrap: break-word;
     }
 
     .progress-bar {
@@ -534,6 +537,17 @@
 
     /* Mobile Optimizations */
     @media (max-width: 768px) {
+      .loading-text {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 0 20px;
+        line-height: 1.4;
+      }
+      
+      .progress-bar {
+        width: 250px;
+      }
+      
       .countdown-unit {
         min-width: 80px;
         padding: 20px 15px;
@@ -550,6 +564,23 @@
       .modern-button {
         padding: 12px 25px;
         font-size: 1rem;
+      }
+    }
+
+    /* Extra small mobile screens */
+    @media (max-width: 480px) {
+      .loading-text {
+        font-size: 1.2rem;
+        padding: 0 15px;
+      }
+      
+      .progress-bar {
+        width: 200px;
+      }
+      
+      .loading-screen div:last-child {
+        font-size: 0.9rem;
+        padding: 0 15px;
       }
     }
 
@@ -578,11 +609,11 @@
 <body>
   <!-- Loading Screen -->
   <div class="loading-screen" id="loadingScreen">
-    <div class="loading-text">🎉 Setting Up the Celebration.. 🎂</div>
+    <div class="loading-text">🎉 Setting Up the Celebration... 🎂</div>
     <div class="progress-bar">
       <div class="progress-fill"></div>
     </div>
-    <div style="color: white; opacity: 0.8;">Get ready for something special!</div>
+    <div style="color: white; opacity: 0.8;">Something magical is about to unfold!</div>
   </div>
 
   <!-- Particle Background -->
@@ -803,7 +834,7 @@
   <script>
   // Set the date we're counting down to (2 minutes from now)
   // var countDownDate = new Date().getTime() + 1 * 60 * 1000;
-  var countDownDate = new Date("sep 22 2025 00:00:00").getTime();
+  var countDownDate = new Date("sep 24 2025 00:00:00").getTime();
 
   function startBackgroundMusic() {
       var audio = document.getElementById('backgroundMusic');
@@ -1055,5 +1086,3 @@
 </body>
 
 </html>
-
-
